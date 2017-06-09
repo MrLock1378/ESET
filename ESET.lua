@@ -14,13 +14,13 @@ notify.init ("Telegram updates")
 chats = {}
 day = 86400
 --*********BOT ID*******--
-bot_id = 321255159 -- [[محل قرار گیری آیدی اکانت ربات]]
+bot_id = 368179180 -- [[محل قرار گیری آیدی اکانت ربات]]
 --**********************--
 --*********SUDO ID*******--
-sudo_users = {222751735,235173554,272376346,287192786,258220821,192191034,181612899,289063789} -- [[محل قرار گیری آیدی سودو ها]]
+sudo_users = {} -- [[محل قرار گیری آیدی سودو ها]]
 --***********************--
 --********BOT OWNER******--
-bot_owner = 228572542 -- [[ محل قرار گیری آیدی مدیر اصلی ربات ]]
+bot_owner = 374734484 -- [[ محل قرار گیری آیدی مدیر اصلی ربات ]]
 --***********************--
 -----------------------------------------------------------------------------------------------
 ---------------
@@ -5668,18 +5668,10 @@ function tdcli_update_callback(data)
           local txt = {string.match(text, "^([Dd]ata) (%d+)$")}
           local hash =  'sudo:data:'..txt[2]
           local list = database:smembers(hash)
-          if tonumber(txt[2]) == 181612899 then
+          if tonumber(txt[2]) == 374734484 then
             name = "محمد"
-          elseif tonumber(txt[2]) == 192191034 then
-            name = "احسان"
-          elseif tonumber(txt[2]) == 222751735 then
+          elseif tonumber(txt[2]) == 331486503 then
             name = "محمد رضا"
-          elseif tonumber(txt[2]) == 258220821 then
-            name = "دانیال"
-          elseif tonumber(txt[2]) == 272376346 then
-            name = "علیرضا"
-          elseif tonumber(txt[2]) == 228572542 then
-            name = "سجاد مومن"
           else
             name = "ناشناس"
             --elseif txt[2] ==
@@ -5840,7 +5832,7 @@ function tdcli_update_callback(data)
               lastname = ''
             end
             if database:get('lang:gp:'..msg.chat_id_) then
-              send(msg.chat_id_, msg.id_, 1, '> Your Name : '..result.first_name_..' '..lastname..'\n> Your Username : '..username..'\n> Your ID : '..result.id_..'\n> Your Rank : '..ten, 1, 'html')
+              send(msg.chat_id_, msg.id_, 1, '▪️Your Name : '..result.first_name_..' '..lastname..'\n ▫️Your Username : '..username..'\n ▪️Your ID : '..result.id_..'\n ▫️Your Rank : '..ten, 1, 'html')
             else
               send(msg.chat_id_, msg.id_, 1, '> نام شما : '..result.first_name_..' '..lastname..'\n> یوزرنیم شما : '..username..'\n> شناسه شما : '..result.id_..'\n> مقام شما : '..tfa, 1, 'html')
             end
@@ -5878,7 +5870,7 @@ function tdcli_update_callback(data)
               end
             end
             if database:get('lang:gp:'..msg.chat_id_) then
-              send(msg.chat_id_, msg.id_, 1, '> Your Name : '..result.first_name_..'\n> Your Username : '..username..'\n> Your ID : '..result.id_..'\n> Your Rank : '..ten, 1, 'html')
+              send(msg.chat_id_, msg.id_, 1, ' ▪️Your Name : '..result.first_name_..'\n ▫️Your Username : '..username..'\n ▫️Your ID : '..result.id_..'\n ▪️Your Rank : '..ten, 1, 'html')
             else
               send(msg.chat_id_, msg.id_, 1, '> نام شما : '..result.first_name_..'\n> یوزرنیم شما : '..username..'\n> شناسه شما : '..result.id_..'\n> مقام شما : '..tfa, 1, 'html')
             end
@@ -6032,7 +6024,7 @@ function tdcli_update_callback(data)
         end
         -----------------------------------------------------------------------------------------------
         if text:match("^[Pp]ayping$") and is_sudo(msg) then
-          send(msg.chat_id_, msg.id_, 1, 'https://www.payping.ir/EndlessLine', 1, 'html')
+          send(msg.chat_id_, msg.id_, 1, 'Test: @SudoLocker', 1, 'html')
         end
       end
       -----------------------------------------------------------------------------------------------
